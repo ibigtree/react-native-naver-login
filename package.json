@@ -1,0 +1,39 @@
+{
+  "name": "@ibigtree/react-native-naver-login",
+  "title": "React Native Naver Login",
+  "version": "0.0.1",
+  "description": "Naver Login for React Native",
+  "main": "index.js",
+  "files": [
+    "android",
+    "index.js",
+    "ios",
+    "react-native-naver-login.podspec"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibigtree/react-native-naver-login.git",
+    "baseUrl": "https://github.com/ibigtree/react-native-naver-login"
+  },
+  "keywords": [
+    "react-native",
+    "naver"
+  ],
+  "author": {
+    "name": "Daehan Kim",
+    "email": "daehankim@ibigtree.kr"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.113.0",
+    "react-native": "^0.62.2"
+  }
+}
