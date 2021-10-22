@@ -10,6 +10,10 @@ declare module '@ibigtree/react-native-naver-login' {
         accessToken: string;
     }
 
-    export function login(options: NaverLoginOptions): Promise<NaverLoginAuthTokenInfo>;
-    export function logout(): Promise<boolean>;
+    namespace NaverLogin {
+        function login(options: NaverLoginOptions): Promise<NaverLoginAuthTokenInfo>;
+        function logout(): Promise<boolean>;
+    }
+
+    export default NaverLogin;
 }
