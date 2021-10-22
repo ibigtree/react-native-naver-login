@@ -8,10 +8,6 @@
 ; Ignore polyfills
 node_modules/react-native/Libraries/polyfills/.*
 
-; These should not be required directly
-; require from fbjs/lib instead: require('fbjs/lib/warning')
-node_modules/warning/.*
-
 ; Flow doesn't support platforms
 .*/Libraries/Utilities/LoadingView.js
 
@@ -30,23 +26,38 @@ emoji=true
 esproposal.optional_chaining=enable
 esproposal.nullish_coalescing=enable
 
+exact_by_default=true
+
+format.bracket_spacing=false
+
 module.file_ext=.js
 module.file_ext=.json
+module.file_ext=.web.js
 module.file_ext=.ios.js
-
+module.file_ext=.android.js
+module.file_ext=.native.js
+module.file_ext=.ts
+module.file_ext=.tsx
+module.file_ext=.ios.ts
+module.file_ext=.ios.tsx
+module.file_ext=.android.ts
+module.file_ext=.android.tsx
+module.file_ext=.native.ts
+module.file_ext=.native.tsx
+module.file_ext=.web.ts
+module.file_ext=.web.tsx
 munge_underscores=true
 
-module.name_mapper='^react-native/\(.*\)$' -> '<PROJECT_ROOT>/node_modules/react-native/\1'
 module.name_mapper='^@?[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)$' -> '<PROJECT_ROOT>/node_modules/react-native/Libraries/Image/RelativeImageStub'
+; babel-plugin-root-import related setting
+module.name_mapper='^~\/\(.*\)$' -> '<PROJECT_ROOT>/app/\1'
+; react-native-web mapping
+module.name_mapper='^react-native$' -> 'react-native-web'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
 suppress_type=$FlowFixMeProps
 suppress_type=$FlowFixMeState
-
-suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(<VERSION>\\)? *\\(site=[a-z,_]*react_native\\(_ios\\)?_\\(oss\\|fb\\)[a-z,_]*\\)?)\\)
-suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(<VERSION>\\)? *\\(site=[a-z,_]*react_native\\(_ios\\)?_\\(oss\\|fb\\)[a-z,_]*\\)?)\\)?:? #[0-9]+
-suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
 
 [lints]
 sketchy-null-number=warn
@@ -56,10 +67,8 @@ untyped-type-import=warn
 nonstrict-import=warn
 deprecated-type=warn
 unsafe-getters-setters=warn
-inexact-spread=warn
 unnecessary-invariant=warn
 signature-verification-failure=warn
-deprecated-utility=error
 
 [strict]
 deprecated-type
@@ -71,4 +80,4 @@ untyped-import
 untyped-type-import
 
 [version]
-^0.113.0
+^0.158.0
