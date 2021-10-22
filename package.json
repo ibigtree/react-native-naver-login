@@ -1,7 +1,7 @@
 {
   "name": "@ibigtree/react-native-naver-login",
   "title": "React Native Naver Login",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Naver Login for React Native",
   "main": "index.js",
   "files": [
