@@ -7,6 +7,7 @@ import React from 'react';
 import {SafeAreaView, Button, StatusBar} from 'react-native';
 import NaverLogin from '@ibigtree/react-native-naver-login';
 
+
 const App = () => {
   return (
     <>

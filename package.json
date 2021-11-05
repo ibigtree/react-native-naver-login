@@ -4,9 +4,11 @@
   "version": "0.0.3",
   "description": "Naver Login for React Native",
   "main": "index.js",
+  "types": "index.d.ts",
   "files": [
     "android",
     "index.js",
+    "index.d.ts",
     "ios",
     "react-native-naver-login.podspec"
   ],
